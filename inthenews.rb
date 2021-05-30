@@ -1,9 +1,7 @@
-# import InTheNews
-#
-# @news = InTheNews::Parser.new
-# items = @news.items
+require 'inthenews'
 
-name = gets
-puts name + ' ' + name
-puts 'diego'
-puts 'diego'
+@news = InTheNews::Parser.new
+items = @news.items
+
+puts items.first.text
+puts items.first.topics
