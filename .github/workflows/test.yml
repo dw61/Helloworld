@@ -1,3 +1,6 @@
 name: Contains a space
 
 on: push
+
+jobs:
+  nothing
