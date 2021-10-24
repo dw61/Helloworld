@@ -2,5 +2,10 @@ name: Contains a space
 
 on: push
 
-jobs:
-  build:
+runs:
+  using: composite
+  steps:
+  - name: Show env
+    shell: bash
+    run: |
+      echo hellowwww
