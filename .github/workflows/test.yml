@@ -6,13 +6,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    strategy:
-      max-parallel: 4
-      matrix:
-        python-version: [3.9]
 
     steps:
     # - uses: actions/checkout@v2
-    - name: Run Code
+    - name: Run code
       run: |
         echo hi
