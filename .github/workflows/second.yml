@@ -7,5 +7,4 @@ jobs:
   j:
     runs-on: ubuntu-latest
     steps:
-    - name: Run code
       run: echo hi
