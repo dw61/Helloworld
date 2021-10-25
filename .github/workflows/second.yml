@@ -1,4 +1,4 @@
-name: Upload
+name: Deploy
 
 on: push
 
@@ -11,10 +11,10 @@ jobs:
     - name: Checkout helloworld
       uses: actions/checkout@v2
 
-    - name: Set up latest Python
+    - name: Set up Python
       uses: actions/setup-python@v2
 
-    - name: Install packages to build and publish
+    - name: Install python packages
       run: pip install setuptools wheel twine
 
     - name: Build

@@ -16,7 +16,7 @@ import setuptools
 
 setuptools.setup(
     name="hbar",
-    version="0.0.8",
+    version="0.0.9",
     author_email="xx@virginia.edu",
     description="A Project.",
     long_description="no description hahaha surprise",
