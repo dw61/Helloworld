@@ -1,4 +1,3 @@
-# test electronvolt.py with atom script
 # python -i electronvolt.py
 # update README.md
 # update version number in setuptools.setup
@@ -12,7 +11,7 @@ import setuptools
 
 setuptools.setup(
     name="hbar",
-    version="0.0.10",
+    version="0.0.11",
     author_email="xx@virginia.edu",
     description="A Project.",
     long_description="no description hahaha surprise",
