@@ -1,15 +1,15 @@
-name: Deploy
+name: Publish
 
 on: push
 
 jobs:
-  deploy:
+  publish:
     runs-on: ubuntu-latest
 
     steps:
 
     - name: Checkout helloworld
-      uses: actions/checkout@master
+      uses: actions/checkout@main
 
     - name: Set up Python
       uses: actions/setup-python@v2
