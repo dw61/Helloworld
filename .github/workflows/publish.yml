@@ -35,15 +35,15 @@ jobs:
     #     password: ${{ secrets.PYPI_TOKEN }}
     #     repository_url: https://test.pypi.org/legacy/
 
-  test:
-    runs-on: ubuntu-latest
-    steps:
-
-    - name: set up Python
-      uses: actions/setup-python@v2
-
-    - name: install hbar
-      run: pip install -i https://test.pypi.org/simple/ hbar
-
-    - name: run test
-      run: python -c 'import hbar; assert True'
+  # test:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #
+  #   - name: set up Python
+  #     uses: actions/setup-python@v2
+  #
+  #   - name: install hbar
+  #     run: pip install -i https://test.pypi.org/simple/ hbar
+  #
+  #   - name: run test
+  #     run: python -c 'import hbar; assert True'

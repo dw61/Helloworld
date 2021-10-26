@@ -1,0 +1,17 @@
+name: test
+
+on: push
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: checkout helloworld
+      uses: actions/checkout@main
+
+    - name: set up Python
+      uses: actions/setup-python@v2
+
+    - name: run test
+      run: python test.py
