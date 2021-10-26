@@ -4,7 +4,7 @@ on:
   push:
     paths:
     - setup.py
-    - '.github/workflows/publish.yml'
+    # - '.github/workflows/publish.yml'
 
 jobs:
   publish:
