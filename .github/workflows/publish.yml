@@ -2,8 +2,8 @@ name: Publish
 
 on:
   push:
-    paths: setup.py
     branch: master
+    paths: setup.py # only when version changes
 
 jobs:
   publish:
@@ -11,19 +11,19 @@ jobs:
 
     steps:
 
-    - name: Checkout helloworld
+    - name: checkout helloworld
       uses: actions/checkout@main
 
-    - name: Set up Python
+    - name: set up Python
       uses: actions/setup-python@v2
 
-    - name: Install python packages
+    - name: install python packages
       run: pip install setuptools wheel twine
 
-    - name: Build
+    - name: build
       run: python setup.py sdist bdist_wheel
 
-    - name: Publish
+    - name: publish
       env:
         TWINE_USERNAME: __token__
         TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
