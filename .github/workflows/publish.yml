@@ -2,8 +2,7 @@ name: Publish
 
 on:
   push:
-    paths:
-    - setup.py
+    paths: setup.py
     # - '.github/workflows/publish.yml'
 
 jobs:
