@@ -1,4 +1,4 @@
-name: publish
+name: publish to pypi
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
     - name: set up Python
       uses: actions/setup-python@v2
 
-    - name: test helloworld
+    - name: test hbar
       run: python -B tests.py
 
     - name: install publishing packages
