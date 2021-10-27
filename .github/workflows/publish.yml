@@ -16,11 +16,13 @@ jobs:
     - name: set up Python
       uses: actions/setup-python@v2
 
-    - name: install python packages
-      run: pip install setuptools twine build
+    - name: test helloworld
+      run: python -B tests.py
+
+    - name: install publishing packages
+      run: pip install setuptools build twine
 
     - name: build
-      # run: python setup.py sdist bdist_wheel
       run: python -m build
 
     - name: publish
@@ -28,13 +30,6 @@ jobs:
         TWINE_USERNAME: __token__
         TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
       run: twine upload  --repository testpypi dist/*
-
-    # - name: PyPA Publish
-    #   uses: pypa/gh-action-pypi-publish@release/v1
-    #   with:
-    #     user: __token__
-    #     password: ${{ secrets.PYPI_TOKEN }}
-    #     repository_url: https://test.pypi.org/legacy/
 
   # test:
   #   runs-on: ubuntu-latest
