@@ -1,4 +1,4 @@
-name: test hbar
+name: Test
 
 on: push
 
@@ -8,13 +8,10 @@ jobs:
     steps:
 
     - name: checkout helloworld
-      uses: actions/checkout@main
+      uses: actions/checkout@v2
 
     - name: set up Python
       uses: actions/setup-python@v2
 
     - name: run test
-      run: python -B tests.py
-
-    - name: what is github.head_ref?
-      run: echo ${{ github.head_ref }}
+      run: python tests.py
