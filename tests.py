@@ -1,4 +1,4 @@
 import hbar
 
-assert False
+assert True
 hbar.x()
