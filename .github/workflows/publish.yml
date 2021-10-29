@@ -1,6 +1,10 @@
 name: Publish to PyPI
 
-on: [push, pull_request] # hia hia hia
+on: # conflict
+  push:
+    branches: master
+    paths: setup.py
+
 
 jobs:
   upload:
