@@ -2,9 +2,9 @@ name: test hbar
 
 on: push
 
-concurrency:
-  group: ${{ github.head_ref }}
-  cancel-in-progress: true
+# concurrency:
+#   group: ${{ github.head_ref }}
+#   cancel-in-progress: true
 
 jobs:
   upload:
@@ -19,3 +19,6 @@ jobs:
 
     - name: run test
       run: python -B tests.py
+
+    - name: what is github.head_ref?
+      run: echo ${{ github.head_ref }}
