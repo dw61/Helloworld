@@ -1,8 +1,6 @@
 name: test hbar
 
-on:
-  push:
-    paths-ignore: setup.py
+on: push
 
 jobs:
   upload:
