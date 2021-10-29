@@ -5,6 +5,7 @@ on: # conflict
     branches: master
     paths: setup.py
 
+
 jobs:
   upload:
     runs-on: ubuntu-latest
