@@ -20,7 +20,7 @@ jobs:
       run: python -B tests.py
 
     - name: install publishing packages
-      run: pip install setuptools build twine
+      run: pip install build twine
 
     - name: build
       run: python -m build
