@@ -1,9 +1,6 @@
 name: Publish to PyPI
 
-on: # conflict
-  push:
-    branches: master
-    paths: setup.py
+on: [push, pull_request]
 
 
 jobs:
