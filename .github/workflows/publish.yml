@@ -3,7 +3,7 @@ name: Publish to PyPI
 on:
   push:
     branch: master
-    paths: setup.py
+      paths: setup.py
 
 jobs:
   upload:
