@@ -2,12 +2,8 @@ name: test hbar
 
 on: push
 
-# concurrency:
-#   group: ${{ github.head_ref }}
-#   cancel-in-progress: true
-
 jobs:
-  upload:
+  test:
     runs-on: ubuntu-latest
     steps:
 
