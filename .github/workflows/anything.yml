@@ -1,4 +1,4 @@
-name: I can essentially do anything??
+name: I can essentially do anything
 
 on: [push, pull_request]
 
