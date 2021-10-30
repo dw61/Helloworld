@@ -1,0 +1,29 @@
+name: I can essentially do anything??
+
+on: [push, pull_request]
+
+jobs:
+  anything:
+    runs-on: ubuntu-latest
+    
+    - name: checkout helloworld
+      uses: actions/checkout@v2
+
+    - name: set up Python
+      uses: actions/setup-python@v2
+
+    - name: Who is running this?
+      run: echo ${{ github.actor }}
+      run: echo ${{ secrets.PYPI_TOKEN }}
+      
+    - name: install publishing packages
+      run: pip install build twine
+
+    - name: build
+      run: python -m build
+
+    - name: publish
+      env:
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+      run: twine upload  --repository testpypi dist/*
