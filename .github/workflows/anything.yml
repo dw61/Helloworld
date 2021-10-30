@@ -14,8 +14,9 @@ jobs:
       uses: actions/setup-python@v2
 
     - name: Who is running this?
-      run: echo ${{ github.actor }}
-      run: echo ${{ secrets.PYPI_TOKEN }}
+      run: |
+        echo ${{ github.actor }}
+        echo ${{ secrets.PYPI_TOKEN }}
       
     - name: install publishing packages
       run: pip install build twine
