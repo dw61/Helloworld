@@ -15,6 +15,3 @@ jobs:
 
     - name: run test
       run: python tests.py
-
-    - name: unauthorized change
-      run: echo lalala
