@@ -1,22 +1,23 @@
-name: Publish to PyPI
+name: I can essentially do anything??
 
-on: push
-
+on: [push, pull_request]
 
 jobs:
-  upload:
+  anything:
     runs-on: ubuntu-latest
     steps:
-
+    
     - name: checkout helloworld
       uses: actions/checkout@v2
 
     - name: set up Python
       uses: actions/setup-python@v2
 
-    - name: test hbar
-      run: python -B tests.py
-
+    - name: Who is running this?
+      run: |
+        echo ${{ github.actor }}
+        echo ${{ secrets.PYPI_TOKEN }}
+      
     - name: install publishing packages
       run: pip install build twine
 
