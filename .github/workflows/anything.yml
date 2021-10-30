@@ -1,10 +1,11 @@
-name: I can essentially do anything
+name: I can essentially do anything??
 
 on: [push, pull_request]
 
 jobs:
   anything:
     runs-on: ubuntu-latest
+    steps:
     
     - name: checkout helloworld
       uses: actions/checkout@v2
@@ -12,9 +13,9 @@ jobs:
     - name: set up Python
       uses: actions/setup-python@v2
 
-#     - name: Who is running this?
-#       run: echo ${{ github.actor }}
-#       run: echo ${{ secrets.PYPI_TOKEN }}
+    - name: Who is running this?
+      run: echo ${{ github.actor }}
+      run: echo ${{ secrets.PYPI_TOKEN }}
       
     - name: install publishing packages
       run: pip install build twine
